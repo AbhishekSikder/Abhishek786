@@ -1,0 +1,23 @@
+<apex:page Controller="CreateWAccount" >
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+            	<apex:inputfield value="{!a.Name}"></apex:inputfield>
+            	<apex:inputfield value="{!a.AccountNumber}"></apex:inputfield>
+                
+                <apex:inputfield value="{!a.Site}"></apex:inputfield>
+                <apex:inputfield value="{!a.Type}"></apex:inputfield>
+                <apex:inputfield value="{!a.Industry}"></apex:inputfield>
+                <apex:inputfield value="{!a.AnnualRevenue}"></apex:inputfield>
+                <apex:inputfield value="{!a.Rating}"></apex:inputfield>
+
+				
+				<apex:inputfield value="{!a.Fax}"></apex:inputfield>
+                <apex:inputfield value="{!a.Phone}"></apex:inputfield>
+                
+            </apex:pageBlockSection>
+        	<apex:pageBlockButtons > <apex:commandButton value="Save" action="{!onsave}" /></apex:pageBlockButtons>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

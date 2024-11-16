@@ -1,0 +1,37 @@
+<apex:page controller="AccConOpp">
+    <apex:form >
+    	<apex:PageBlock >
+            <apex:pageBlockButtons >
+            	<apex:commandButton value="Save" action="{!save}"/>
+            
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!a.Name}"/>
+				 <apex:inputField value="{!a.AccountNumber}"/>
+                 <apex:inputField value="{!a.AnnualRevenue}"/>
+                 <apex:inputField value="{!a.Industry}"/>            	
+			            	
+            </apex:pageBlockSection>
+            
+            
+        	<apex:pageBlockSection >
+				 <apex:inputField value="{!c.lastName}"/>
+                 <apex:inputField value="{!c.Email}"/>
+                 <apex:inputField value="{!c.Phone}"/>            	
+			            	
+            </apex:pageBlockSection>
+            
+            
+            <apex:pageBlockSection >
+				 
+                 <apex:inputField value="{!o.Name}"/>
+                <apex:inputField value="{!o.AccountId}"/>
+                 <apex:inputField value="{!o.StageName}"/>  
+                <apex:inputField value="{!o.CloseDate}"/> 
+			            	
+            </apex:pageBlockSection>
+        </apex:PageBlock>
+    	
+    </apex:form>
+   
+</apex:page>

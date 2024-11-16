@@ -1,0 +1,27 @@
+<apex:page controller="CreateInvoice">
+    <apex:form >
+    	<apex:pageblock >
+            <apex:pageBlockButtons ><apex:commandButton value="Save" action="{!onsave}" /></apex:pageBlockButtons>
+        	<apex:pageBlockTable value="{!ivlist}" var="iv">
+            	<apex:column value="{!iv.Salesorder__c}"/>
+            	<apex:column value="{!iv.Account__c}"/>
+                <apex:column value="{!iv.Contact__c}"/>
+                <apex:column value="{!iv.Customopportunity__c}"/>
+                
+            </apex:pageBlockTable>
+           	
+        </apex:pageblock>
+        
+        <apex:pageblock >
+        	<apex:pageBlockTable value="{!ili}" var="ip">
+            	<apex:column value="{!ip.SalesOrderLineItem__c}"/>
+            	<apex:column ><apex:inputfield value="{!ip.BalanceQuantity__c}"></apex:inputfield></apex:column>
+                
+                <apex:column value="{!ip.Productc__c}"/>
+            
+            </apex:pageBlockTable>
+        
+        </apex:pageblock>
+        
+    </apex:form>
+</apex:page>

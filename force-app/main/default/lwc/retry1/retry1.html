@@ -1,0 +1,14 @@
+<template>
+    <lightning-input name="FirstName"></lightning-input>
+    <lightning-input name="LastName"></lightning-input>
+    <lightning-input name="Salary"  onchange={showme}></lightning-input>
+     <lightning-button label="Click here"  onclick={callme}></lightning-button>
+     <h1>The salary is {salary} </h1>
+     <lightning-datatable
+     key-field="employeeId"
+     data={employeeData}
+     columns={employeeColumn}>
+    </lightning-datatable>
+
+
+</template>

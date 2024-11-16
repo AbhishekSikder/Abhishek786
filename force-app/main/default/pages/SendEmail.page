@@ -1,0 +1,27 @@
+<apex:page >
+    <apex:form >
+    	
+        <apex:pageblock >
+        	<apex:pageblocksection >
+            	<apex:inputText label="To"/>
+                
+                 
+            </apex:pageblocksection>
+            <apex:pageblocksection >
+            	<apex:inputText label="cc"/>
+                
+                 
+            </apex:pageblocksection>
+            <apex:pageblocksection >
+            	<apex:inputText label="Subject"/>
+                
+                 
+            </apex:pageblocksection>
+            
+        
+        </apex:pageblock>
+        
+		<apex:inputtextarea />        
+    
+    </apex:form>
+</apex:page>

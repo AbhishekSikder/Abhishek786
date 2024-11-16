@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Check and Uncheck using Buttons">
+        <div class="slds-m-around_medium">
+            <lightning-checkbox-group
+            name="CheckBox Group"
+            label="CheckBox Group"
+            options={options}
+            value={v}
+            data-id="c"
+            >
+
+            </lightning-checkbox-group>
+        </div>
+        <lightning-button label="Select all" onclick={handleSave}></lightning-button>
+        <lightning-button label="UnSelect all" onclick={handleUnCheck}></lightning-button>
+    </lightning-card>
+</template>

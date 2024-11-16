@@ -1,0 +1,51 @@
+<template>
+    <lightning-card
+        title="ApexWireMethodWithParamsExample "
+        icon-name="custom:custom63">
+        <div
+            class="slds-text-heading_small slds-text-align_left"
+            style="padding-left: 15px">
+            Get Matching Opportunities with Stage Name and Amount
+        </div>
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Opportunity Stage"
+                options={stageOptions}
+                onchange={handleStageChange}>
+            </lightning-combobox>
+            <lightning-input
+                type="number"
+                onchange={handleKeyChange}
+                class="slds-var-m-bottom_small"
+                label="Amount"
+                placeholder="Enter Amount to Search Opps..."
+                value={searchAmount}>
+            </lightning-input>
+            <template lwc:if={hasOpps}>
+                <table
+                    class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr>
+                            <th>Opportunity Name</th>
+                            <th>Opportunity Stage</th>
+                            <th>Opportunity Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template
+                            for:each={opportunities}
+                            for:item="opportunity">
+                            <tr key={opportunity.Id}>
+                                <td>{opportunity.Name}</td>
+                                <td>{opportunity.StageName}</td>
+                                <td>{opportunity.Amount}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+            <template lwc:elseif={error}>{error.body.message} </template>
+            <template lwc:else> No matching Data Found.... </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Car Tile List" icon-name="standard:standard:apex_plugin">
+        <div class="slds-p-around_medium">
+            <template lwc:if={carfetched}>
+                Cars fetched successfully
+                <template for:each={car} for:item="c">
+                    <!--<h2 key={c.Id}>{c.Name}</h2> -->
+                    <c-car-tile key={c.Id} indivisualcardetail={c} onselected={handlerecordid}></c-car-tile>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

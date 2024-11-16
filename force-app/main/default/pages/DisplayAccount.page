@@ -1,0 +1,16 @@
+<apex:page controller="DisplayAccount">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockTable value="{!w}" var="s">
+                <apex:column ><apex:inputCheckbox value="{!b}"/></apex:column>
+            	<apex:column value="{!s.a.Name}"/>
+                <apex:column value="{!s.a.AccountNumber}"/>
+                <apex:column value="{!s.a.AnnualRevenue}"/>
+                <apex:column value="{!s.a.Phone}"/>
+            
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

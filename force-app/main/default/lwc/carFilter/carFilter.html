@@ -1,0 +1,62 @@
+<template>
+    <lightning-card title="Car Filter" icon-name="standard:calibration">
+        <div class="slds-m-horizontal_medium" >
+            <lightning-input label="Search Key" type="search"  value={filters.searchkey}
+            onchange={handleKeyChange} ></lightning-input>
+
+            <section class="slider_section">
+                <lightning-slider label="Max Price" step="100" min="0" max="999999" value={filters.maxPrice} 
+                onchange={handleMaxPriceChnage}></lightning-slider>
+            </section>
+
+            <section>
+               <h2>Category</h2>
+               <template if:true={categories}>
+                    <!--<template for:each={categories} for:item="category">
+                        <lightning-input key={category.value} label={category.label}
+                        type="checkbox" name="category" checked onchange={handleCheckBox}>
+
+                        </lightning-input>
+                        inside template loop
+                    </template>-->
+                    <lightning-checkbox-group name="Checkbox Group"
+                    label="Categories Group"
+                    options={categories.values}
+                    value={value}
+                    onchange={handleChange}></lightning-checkbox-group>
+                    <div>Inside category data</div>
+               </template>
+               <!--<template if:true={categories.error}>
+                <div>{ce}</div>
+               </template>-->
+            </section>
+
+            <section>
+                <h2>Make</h2>
+                
+                <template if:true={makeType}>
+                    
+                       <!-- <template for:each={makeType.values} for:item="makeTypeItem">
+                            <lightning-input key={makeTypeItem.value} label={makeTypeItem.label}
+                            type="checkbox" name="makeType"  onchange={handleCheckBox}>
+    
+                            </lightning-input>
+                        </template>-->
+
+                        <lightning-checkbox-group name="Checkbox Group"
+                            label="makeType Group"
+                            options={makeType.values}
+                            value={valueb}
+                            onchange={handleNChange}></lightning-checkbox-group>
+                   
+                   <div>Inside MakeType data</div>
+                </template>
+                <!--<template if:true={makeType.error}>
+                 <div>{me}</div>
+                </template>-->
+             </section>
+
+        </div>
+
+    </lightning-card>
+</template>

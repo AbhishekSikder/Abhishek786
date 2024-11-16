@@ -1,0 +1,37 @@
+<apex:page controller="DisplayQliList" >
+	
+    	
+        	<table>
+                <tr>
+                <th>
+                	Quotelineitemname
+                </th>
+                 <th>
+                	QuoteName
+                </th>
+                 <th>
+                	Oppname
+                </th>
+                 <th>
+                	Opportunityitemname
+                </th>
+                </tr>
+                <apex:repeat value="{!qlilist}" var="q">
+                	<tr>
+                    	
+                    	<td>{!q.name}</td>
+                        
+                         
+                    </tr>
+				</apex:repeat>	                
+               
+            </table>
+            <apex:dataTable value="{!qlilist}" var="q">
+            
+            	<apex:column value="{!q.name}"/>
+            </apex:dataTable>
+        	
+        
+    	
+    
+</apex:page>

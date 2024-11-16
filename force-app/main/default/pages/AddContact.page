@@ -1,0 +1,28 @@
+<apex:page controller="AddContact" >
+   <apex:form >
+    	<apex:pageBlock >
+       		<apex:pageBlockButtons >
+            	<apex:commandButton action="{!add}" value="Add"/>
+            	<apex:commandButton action="{!save}" value="Save Rows"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockTable value="{!clist}" var="s">
+				<apex:column headerValue="LastName" > 
+                	<apex:inputtext value="{!s.LastName}"></apex:inputtext>
+                </apex:column>
+                <apex:column headerValue="Phone"> 
+                	<apex:inputtext value="{!s.phone}"></apex:inputtext>
+                </apex:column>
+                <apex:column headerValue="Email"> 
+                	<apex:inputtext value="{!s.Email}"></apex:inputtext>
+                </apex:column>
+                <apex:column > 
+                	<apex:commandButton action="{!del}" value="Delete"/>
+                </apex:column>
+            </apex:pageBlockTable>
+       		<apex:outputText value="{!error}"></apex:outputText>
+        </apex:pageBlock>
+    
+    </apex:form> 
+   
+</apex:page>

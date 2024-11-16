@@ -1,0 +1,30 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="6">
+            <lightning-card title="LeftComponent"></lightning-card>
+            <lightning-input type="text" label="Enter some student name" onchange={handlechild}></lightning-input>
+            <c-child-comp-practise-new label="Enter New" ></c-child-comp-practise-new>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <lightning-card title="RightComponent"></lightning-card>
+           
+            <lightning-input type="text" label="Enter some text" onchange={handleonchange}></lightning-input>
+            <lightning-input type="checkbox" label="show red" onchange={handleoncheck}></lightning-input>
+                <template if:true={showred}>
+                <div style="background-color:red">
+                    ------{welcomenote}
+                </div>
+                </template>
+                <template if:false={showred}>
+
+                
+                    <div class="firstClass">
+                        ------{welcomenote}
+                    </div>
+                 </template>
+                 <template for:each={students} for:item="student">
+                    <p key={student}>{student}</p>
+                 </template>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

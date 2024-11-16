@@ -1,0 +1,21 @@
+<apex:page controller="SE1">
+    <apex:form >
+        
+        <apex:pageBlock >
+            <apex:commandButton value="Send Email" action="{!send}"/>
+            <br/><br/>
+        	<apex:outputLabel value="To :"></apex:outputLabel>
+            <apex:inputtext value="{!To}" ></apex:inputtext>
+            <br/><br/>
+            <apex:outputLabel value="Bcc"></apex:outputLabel>
+            <apex:inputtext value="{!Bcc}"></apex:inputtext>
+            <br/><br/>
+            <apex:outputlabel value="Body"></apex:outputlabel>
+        
+            <apex:inputTextarea value="{!body}" richText="True"/>
+        </apex:pageBlock>	
+        	
+
+    
+    </apex:form>
+</apex:page>

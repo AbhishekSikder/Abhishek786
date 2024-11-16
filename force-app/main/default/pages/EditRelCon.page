@@ -1,0 +1,20 @@
+<apex:page controller="EditRelCon">	
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Update" action="{!up}"/>
+        	<apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+        	
+        
+    	<apex:pageBlockTable value="{!clist}" var="s">
+            <apex:column ><apex:inputText value="{!s.lastName}"/></apex:column>
+            <apex:column ><apex:inputText value="{!s.email}"/></apex:column>
+            <apex:column ><apex:inputText value="{!s.phone}"/></apex:column>
+            
+            
+        </apex:pageBlockTable>
+    
+    </apex:pageBlock>
+	</apex:form>
+</apex:page>

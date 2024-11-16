@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="products">
+        Record id:{recordId}
+        <lightning-button onclick={handleclick} value="Demo" label="Add Product under opportunity"></lightning-button>
+        <lightning-button onclick={handleSendData} value="d" label="Check out our Products"></lightning-button>
+        <lightning-datatable
+                key-field="id"
+                data={prodlist}
+                columns={columns}>
+        </lightning-datatable>
+
+    </lightning-card>
+</template>

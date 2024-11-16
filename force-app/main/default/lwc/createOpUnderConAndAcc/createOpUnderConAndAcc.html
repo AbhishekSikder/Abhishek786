@@ -1,0 +1,15 @@
+<template>
+    <h2>Opportunity details</h2>
+    <lightning-input label="Opportunity Name" onchange={handleNameChange} ></lightning-input>
+    
+    <lightning-combobox
+        name="progress"
+        label="StageName"
+        value={value}
+        placeholder="StageName"
+        options={options}
+        onchange={handleChange} ></lightning-combobox>
+    <lightning-input label="Closed date" type="date" onchange={handleCloseDate}></lightning-input>
+    <lightning-input label="Account Name" value={accountRecordId} ></lightning-input>
+    <lightning-button label="Save Opportuntiy" onclick={handleSave} ></lightning-button> 
+</template>

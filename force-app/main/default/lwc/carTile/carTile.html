@@ -1,0 +1,11 @@
+<template>
+    <div>
+        <div class="content" onclick={handleClick}>
+            <img src={indivisualcardetail.Picture_URL__c} alt="CarPic" class="slds-align_absolute-center carImage"/>
+            <h2 class="slds-align_absolute-center title">{indivisualcardetail.Name}</h2>
+            <p class="slds-align_absolute-center">
+                <lightning-formatted-number format-style="currency" value={indivisualcardetail.MSRP__c} currency-code="INR"></lightning-formatted-number>
+            </p>
+        </div>
+    </div>
+</template>

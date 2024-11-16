@@ -1,0 +1,11 @@
+.red-background {
+    background-color: red;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.default-background {
+    background-color: white;
+    padding: 20px;
+    transition: background-color 0.3s;
+}

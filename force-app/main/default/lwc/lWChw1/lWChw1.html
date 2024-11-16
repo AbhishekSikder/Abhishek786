@@ -1,0 +1,24 @@
+<template>
+    <lightning-datatable
+        data={data}
+        columns={columns}
+        key-field="Id"
+       
+    >
+    </lightning-datatable>
+    
+        <lightning-input id="1" label="Name" type="text"  value={name} onchange={handleonchange}></lightning-input>
+        <lightning-input id="2" label="Age" type="text" value={age} class="input" onchange={handleonchangeb}></lightning-input>
+
+
+        <lightning-button label="Add" onclick={handleonchangename}>Add</lightning-button>
+        <lightning-button label="Delete" onclick={handleoncremove}>Add</lightning-button>
+        
+        <template for:each={data} for:item="d">
+            <p key={d}>{d.StudentName}, {d.StudentAge}</p>
+            
+        </template>
+    
+    
+    
+</template>

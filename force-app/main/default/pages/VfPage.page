@@ -1,0 +1,215 @@
+<apex:page standardController="Account" >
+   <!-- <apex:stylesheet value="{!$Resource.Style1}"/>  -->
+	<table>
+        <tr>
+        <td><h2>Company Information</h2></td>
+       <td > <apex:sectionHeader subtitle="{!Account.Name}"/>   </td>
+       <td style="font:96pt; padding-right:10px;padding-top:5px; padding-left:300px;"> <apex:image id="Logo" value="{!$Resource.Logo}" width="80" height="80" /></td>
+        </tr>
+     </table>
+      <apex:pageblock > 
+       	 <table style="border:0.5px solid #fff;font-family:sans-serif;">
+          <apex:repeat value="{!Account}" var="a">
+          <tr>
+          	<th>
+            	Bill to  
+            </th>
+          </tr>
+          <tr>
+              <td>
+                  Name
+              </td>
+              <td>
+                  {!Account.Name}
+              </td>
+          </tr>
+           <tr>
+              <td >
+                   Address
+              </td>
+               <td >
+               	{!a.BillingStreet},{!a.BillingPostalCode},
+               	{!a.BillingCity},
+                {!a.BillingState}
+               </td>
+          </tr>
+           <tr>
+              <td>
+                  City
+              </td>
+               <td>
+               	 {!a.BillingCity}
+               
+               </td>
+          </tr>
+          <tr>
+              <td>
+                  State
+              </td>
+               <td>
+               	 {!a.BillingState}
+               
+               </td>
+          </tr>
+          <tr>
+              <td>
+                  ZipCode
+              </td>
+              <td>
+              	{!a.BillingPostalCode}
+              </td>
+          </tr>
+          </apex:repeat>
+       </table>
+    <table style="border:0.6px" >
+        <tr style="border:0.15px;background-color:#009EDB">
+        <td><h4>Invoice# </h4></td>
+        <td text-align="right" style="padding-left:500px"><h4 >Date# </h4></td>
+        </tr>
+   </table> 
+   
+      <table align="right" width="50" >
+          <apex:repeat value="{!Account}" var="a">
+          <tr>
+          	<th>
+            	Ship to  
+            </th>
+          </tr>
+          <tr>
+              <td>
+                  Name
+              </td>
+              <td>
+                  {!Account.Name}
+              </td>
+          </tr>
+           <tr>
+              <td >
+                   Address
+              </td>
+               <td >
+                {!a.BillingStreet},
+                {!a.BillingPostalCode},
+               
+               	{!a.BillingCity},
+                {!a.BillingState}
+               </td>
+          </tr>
+           <tr>
+              <td>
+                  City
+              </td>
+               <td>
+               	 {!a.BillingCity}
+               
+               </td>
+          </tr>
+          <tr>
+              <td>
+                  State
+              </td>
+               <td>
+               	 {!a.BillingState}
+               
+               </td>
+          </tr>
+          <tr>
+              <td>
+                  ZipCode
+              </td>
+              <td>
+              	{!a.BillingPostalCode}
+              </td>
+          </tr>
+          </apex:repeat>
+       </table>
+       	 
+       	<table width="50" height="50">
+          <apex:repeat value="{!Account}" var="a">
+          <tr>
+          	<th>
+            	Bill to  
+            </th>
+          </tr>
+          <tr>
+              <td>
+                  Name
+              </td>
+              <td>
+                  {!Account.Name}
+              </td>
+          </tr>
+           <tr>
+              <td >
+                   Address
+              </td>
+               <td >
+               	{!a.BillingStreet},{!a.BillingPostalCode},
+               	{!a.BillingCity},
+                {!a.BillingState}
+               </td>
+          </tr>
+           <tr>
+              <td>
+                  City
+              </td>
+               <td>
+               	 {!a.BillingCity}
+               
+               </td>
+          </tr>
+          <tr>
+              <td>
+                  State
+              </td>
+               <td>
+               	 {!a.BillingState}
+               
+               </td>
+          </tr>
+          <tr>
+              <td>
+                  ZipCode
+              </td>
+              <td>
+              	{!a.BillingPostalCode}
+              </td>
+          </tr>
+          </apex:repeat>
+       </table>
+       	 
+    </apex:pageblock>  
+            
+    <table  border="1">
+        <tr style="border:0.15px;background-color:#009EDB">
+        	<th >
+            	LastName
+            </th>
+            <th>
+                Email
+            </th>
+            <th >
+            	Phone
+            </th>
+        
+        </tr>   
+        
+        <tr>
+        
+        </tr>
+    </table>
+       
+     <apex:pageBlock >  
+       
+     <apex:pageBlockSection >
+      
+        <apex:pageBlockTable style="padding-top:220px;padding-left:80px"  width="150%" border="70px;" columns="3" cellpadding="10px" align="center" value="{!Account.Contacts}" var="a">
+            <apex:column style="border:0.15px;background-color:#009EDB" value="{!a.lastname}" />
+            <apex:column value="{!a.email}"/>
+            <apex:column value="{!a.phone}"/>
+            
+        </apex:pageBlockTable>
+        </apex:pageBlockSection>	
+    </apex:pageBlock>
+   
+</apex:page>

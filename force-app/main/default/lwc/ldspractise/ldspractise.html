@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Name" ></lightning-input>
+        <lightning-input label="Industry" ></lightning-input>
+        
+        <lightning-combobox
+        name="rating"
+        label="Rating"
+        value={rating}
+        placeholder="Select Rating"
+        options={optionsb}
+        onchange={handleChangeb} ></lightning-combobox>
+
+
+        <lightning-combobox
+        name="industry"
+        label="industry"
+        value={i}
+        placeholder="Select industry"
+        options={options}
+        onchange={handleChange} ></lightning-combobox>
+
+
+        
+        <lightning-button label="Submit" class="slds-m-left_x-small" type="submit" onclick={handleSuccess}></lightning-button>
+
+
+    </lightning-card>
+</template>

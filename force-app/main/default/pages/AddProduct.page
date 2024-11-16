@@ -1,0 +1,22 @@
+<apex:page controller="DisplayProductName">
+    <table>
+        <apex:repeat value="{!productlist}" var="p">
+        	<tr>
+            	<td>
+                
+                	{!p.Name}
+                
+                </td>
+                <td>
+                
+                	{!p.Unit_Price__c}
+                
+                </td>
+            	
+            </tr>
+        
+        </apex:repeat>
+        
+    </table>
+    
+</apex:page>

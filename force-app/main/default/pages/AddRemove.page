@@ -1,0 +1,25 @@
+<apex:page controller="AddRemove" >
+    <apex:form >
+    	<apex:pageBlock >
+            <apex:inputText value="{!st}"/>
+            <apex:inputText value="{!i}"/>
+        	<apex:commandButton value="Add" action="{!add}"/>
+            <apex:commandButton value="Remove" action="{!remove}"/>
+            <apex:commandButton value="Clear" action="{!clear}"/>
+            <apex:commandButton value="deletebyindex" action="{!deletebyindex}"/>
+            <apex:commandButton value="addbyindex" action="{!addbyindex}"/>
+            <apex:outputText value="{!error}"></apex:outputText>
+            <apex:pageBlockTable value="{!l}"  var="s">
+           		 <apex:column value="{!s}"/>
+                <apex:column >
+                	<apex:commandButton value="delete" action="{!deletebyvalue}"/>
+                </apex:column>
+            	 
+                	
+                
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

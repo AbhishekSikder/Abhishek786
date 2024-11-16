@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Car Card" icon-name="standard:apex_plugin">
+        <img src={carpicurl} alt="Car Picture/">
+        <lightning-record-view-form onload={handleRecordLoad} record-id={recordId} object-api-name="Car__c">
+            <lightning-output-field field-name={category}> </lightning-output-field>
+            <lightning-output-field field-name={make}> </lightning-output-field>
+            <lightning-output-field field-name={description}> </lightning-output-field>
+            <lightning-output-field field-name={fuel}> </lightning-output-field>
+            <lightning-output-field field-name={mspr}> </lightning-output-field>
+            <lightning-output-field field-name={numberofseat}> </lightning-output-field>
+            
+        </lightning-record-view-form>
+
+        <lightning-button label="Display Values" onclick={CaptureValues}></lightning-button>
+    </lightning-card>
+</template>

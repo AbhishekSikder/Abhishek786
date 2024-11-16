@@ -1,0 +1,22 @@
+<apex:page standardController="Account" renderAs="pdf">
+    <table>
+        <tr>
+        <td style="padding-bottom:250px"><h2>Company Information</h2></td>
+       <td style="padding-bottom:250px"> <apex:sectionHeader subtitle="{!Account.Name}"/>   </td>
+       <td style="font:96pt; padding-right:10px;padding-top:5px; padding-left:300px;padding-bottom:300px"> <apex:image id="Logo" value="{!$Resource.Logo}" width="60" height="60" /></td>
+        </tr>
+     </table>
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+        	<apex:outputText value="{!Account.Name}"></apex:outputText>
+            <apex:outputText value="{!Account.Name}"></apex:outputText>
+            <apex:outputText value="{!Account.Name}"></apex:outputText>
+            <apex:outputText value="{!Account.Name}"></apex:outputText>
+            <apex:outputText value="{!Account.Name}"></apex:outputText>
+            <apex:outputText value="{!Account.Name}"></apex:outputText>
+        
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+    
+</apex:page>

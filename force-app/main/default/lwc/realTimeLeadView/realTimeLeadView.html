@@ -1,0 +1,52 @@
+<template>
+    <lightning-card  title="RealTimeLeadView"
+    icon-name="custom:custom63">
+    <div
+    class="slds-text-heading_small slds-text-align_left"
+    style="padding-left: 15px">
+    Get Matching lead with leadsource,leadstatus and createddate
+    </div> 
+   
+    <div class="slds-var-m-around_medium">
+        <lightning-combobox
+            label="Lead Source"
+            options={Leadsourcelist}
+            onchange={handleLeadsource}>
+        </lightning-combobox>
+        <lightning-combobox
+            label="Lead status"
+            options={Leadstatuslist}
+            onchange={handleLeadstatus}>
+        </lightning-combobox>
+
+
+        <template lwc:if={hasLeads}>
+            <table
+                class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th>Lead Name</th>
+                        <th>Lead Source</th>
+                        <th>Lead Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template
+                        for:each={leadlist}
+                        for:item="lead">
+                        <tr key={lead.Id}>
+                            <td>{lead.Name}</td>
+                            <td>{lead.leadsource}</td>
+                            <td>{lead.status}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <template lwc:elseif={error}>{error.body.message} </template>
+        <template lwc:else> No matching Data Found.... </template>
+
+
+    </div>
+    </lightning-card>
+</template>

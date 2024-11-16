@@ -1,0 +1,46 @@
+<template>
+    <lightning-card>
+        <lightning-combobox
+                label="Opportunity Stage"
+                options={stageOptions}
+                onchange={handleStageChange}
+                value={searchStage}>
+            </lightning-combobox>
+
+            <lightning-input
+                type="number"
+                onchange={handleAmountChange}
+                class="slds-var-m-bottom_small"
+                label="Amount"
+                placeholder="Enter Amount to Search Opps..."
+                value={searchAmount}>
+        </lightning-input>
+
+        <template lwc:if={hasOpps}>
+            <table
+                class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th>Opportunity Name</th>
+                        <th>Opportunity Stage</th>
+                        <th>Opportunity Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template
+                        for:each={opportunities}
+                        for:item="opportunity">
+                        <tr key={opportunity.Id}>
+                            <td>{opportunity.Name}</td>
+                            <td>{opportunity.StageName}</td>
+                            <td>{opportunity.Amount}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <template lwc:elseif={error}>{error.body.message} </template>
+        <template lwc:else> No matching Data Found.... </template>
+        <br />
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<apex:page controller="Lipdf" renderAs="pdf">
+    <html>
+        <body>
+            <h2>Opportunity Details</h2>
+            <p><b>Opportunity Name:</b> {!o.Name}</p>
+            <p><b>Close Date:</b> {!o.CloseDate}</p>
+            <p><b>Stage:</b> {!o.StageName}</p>
+
+            <h2>Opportunity Line Items</h2>
+            <table border="1">
+                <tr>
+                    
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+        		<apex:repeat value="{!ilist}" var="oli">
+                    <tr>
+                        
+                        <td>{!oli.Quantity__c}</td>
+                        <td>{!oli.Unit_Price__c}</td>
+                        
+                    </tr>
+                </apex:repeat>
+            </table>
+        </body>
+    
+   
+    </html>
+</apex:page>

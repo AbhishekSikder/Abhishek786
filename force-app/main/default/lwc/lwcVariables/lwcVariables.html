@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+            <lightning-layout-item size="6">
+                <lightning-input label="Enter a text" type="text" name="name" value={name}></lightning-input>
+                <lightning-input label="Enter phone" type="phone" name="phone"></lightning-input>
+                <lightning-input label="Enter a salary" type="number" name="salary"></lightning-input>
+                <lightning-input label="Enter a DOB" type="date" value={dob}></lightning-input>
+                <lightning-button label="Click me" onclick={showme}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                TThe final salary of employee is : {finalsal}
+
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

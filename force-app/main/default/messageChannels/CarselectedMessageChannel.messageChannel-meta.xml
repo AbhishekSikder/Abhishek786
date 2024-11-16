@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>CarselectedMessageChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>This is a used to pass record id of selected car to the RHS component.</description>
+    <lightningMessageFields>
+        <fieldName>recordidv</fieldName>
+        <description>This is the recordid of the car that was selected from the list</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>opid</fieldName>
+        <description>This is the recordid of the custom opportunity from where navigation happend</description>
+    </lightningMessageFields>
+    
+</LightningMessageChannel>

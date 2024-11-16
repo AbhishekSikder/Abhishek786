@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="CheckUncheck in Table">
+        <table>
+            <tbody>
+            <tr>
+                <th>CheckBox</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td><lightning-input type="checkBox" value= true class="ch"></lightning-input></td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td><lightning-input type="checkBox" value= false  class="ch"></lightning-input></td></td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td><lightning-input type="checkBox" value= false class="ch"></lightning-input></td></td>
+                <td>Name</td>
+            </tr>
+        </tbody>
+        </table>
+        <lightning-button label="Select all" onclick={handleSave}></lightning-button>
+        <lightning-button label="UnSelect all" onclick={handleUnCheck}></lightning-button>
+
+    </lightning-card>
+</template>

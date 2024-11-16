@@ -1,0 +1,30 @@
+<template>
+    
+
+    <lightning-combobox
+        name="Option"
+        label="Option"
+        value={option}
+        placeholder="Select Option"
+        options={Options}
+        onchange={handlechange} ></lightning-combobox>
+
+    <template lwc:if={property1}>
+        <lightning-record-form 
+            
+            object-api-name="Contact"
+            fields={fields}
+            onsuccess={handleSuccess}>
+
+        </lightning-record-form>
+    </template>
+
+    <template lwc:if={property2}>
+
+    </template>
+
+    <template lwc:else>
+
+    </template>
+
+</template>
