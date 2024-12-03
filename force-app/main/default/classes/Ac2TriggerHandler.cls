@@ -33,6 +33,7 @@ public class Ac2TriggerHandler {
                 c.lastname=mp.get(c.accountid).name;
             }
         }
+        // Updating the list clist
         update clist;
     	
     
